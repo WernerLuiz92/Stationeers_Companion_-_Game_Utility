@@ -88,7 +88,7 @@ onMounted(() => {
 
                 <main class="mt-6">
                     <div class="mb-8 text-center drop-shadow-md">
-                        <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-200 sm:text-6xl">My Laravel App</h1>
+                        <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-200 sm:text-6xl">Stationeers Companion</h1>
                     </div>
                     <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
                         <a
