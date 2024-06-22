@@ -1,25 +1,25 @@
-name: my_laravel_app
+name: stationeers_companion
 services:
   laravel_app:
     build:
-      context: /DATA/Projects/Laravel/my_laravel_app/docker/8.3
+      context: /DATA/Projects/Laravel/stationeers_companion/docker/8.3
       dockerfile: Dockerfile
       args:
         WWWGROUP: "1000"
     cpu_shares: 90
     command: []
-    container_name: my_laravel_app
+    container_name: stationeers_companion
     deploy:
       resources:
         limits:
           memory: 4096M
     environment:
-      - IGNITION_LOCAL_SITES_PATH=/DATA/Projects/Laravel/my_laravel_app
+      - IGNITION_LOCAL_SITES_PATH=/DATA/Projects/Laravel/stationeers_companion
       - LARAVEL_SAIL=1
       - WWWUSER=werner
       - XDEBUG_CONFIG=client_host=host.docker.internal
       - XDEBUG_MODE=off
-    hostname: my_laravel_app
+    hostname: stationeers_companion
     image: sail-8.3/app:latest
     labels:
       icon: https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg
@@ -31,7 +31,7 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /DATA/Projects/Laravel/my_laravel_app
+        source: /DATA/Projects/Laravel/stationeers_companion
         target: /var/www/html
     devices: []
     cap_add: []
@@ -45,6 +45,6 @@ x-casaos:
   is_uncontrolled: false
   port_map: "10888"
   scheme: http
-  store_app_id: my_laravel_app
+  store_app_id: stationeers_companion
   title:
-    custom: My Laravel App
+    custom: Stationeers Companion
